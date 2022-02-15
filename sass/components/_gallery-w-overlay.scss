@@ -1,0 +1,86 @@
+
+.gallery{
+    @include custom-flex-container(space-between, stretch, row, wrap);
+}
+.gallery__item {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &:last-child{
+        margin-bottom: 0px;
+    }
+    @include tab{
+        width: calc(100% / 2 - 30px);
+
+        }
+
+      @include desk {
+        width: calc(100% / 3 - 30px);
+
+        &:nth-last-child(-n+3){
+            margin-bottom: 0px;
+      }}
+
+}
+
+
+.gallery__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &:focus, &:hover {
+        box-shadow: $box-shadow;
+        .gallery__overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.gallery__card {
+    position: relative;
+    overflow: hidden;   
+    display: flex;
+    flex-direction: column; 
+
+}
+
+.gallery__text {
+    @include with-border(1px, $project-border);
+border-top: none;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+.gallery__title {
+    @include custom-text(18px, bold, 36px, $main-txt-cl, left);
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+
+}
+
+.gallery__sup-title {
+    @include custom-text(16px, normal, 30px, $second-txt-cl, left);
+    letter-spacing: 0.03em;
+
+}
+
+
+.gallery__overlay {
+    @include custom-flex-container(center, center, column, nowrap);
+    @extend %animation;
+    position: absolute;
+    background-color: $project-overlay;
+    @include custom-text(18px, normal, 28px, $main-cl, left);
+    letter-spacing: 0.03em;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    opacity: 0;
+    transform: translateY(101%);
+}
+

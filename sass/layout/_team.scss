@@ -1,0 +1,21 @@
+.team {
+    background-color: $filter-cl;
+}
+
+.team__list {
+    @include custom-flex-container(space-between, center, row, wrap);
+    @include tab{
+           margin: -15px; 
+    }
+
+}
+
+.info-card{
+    @include tab{
+        margin: 15px; 
+ }
+}
+
+.info-card:not(:last-child) {
+    margin-bottom: 30px;
+}

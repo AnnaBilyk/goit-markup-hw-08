@@ -1,0 +1,10 @@
+.services {
+    display: none;
+    @include desk{
+        display: flex;
+    }
+}
+.services__list {
+    @include custom-flex-container(space-between, center, row, nowrap);
+}
+

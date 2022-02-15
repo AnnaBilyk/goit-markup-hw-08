@@ -1,0 +1,42 @@
+.contacts{
+    @include tab{
+        @include custom-flex-container(flex-start, left, column, nowrap);
+        @include custom-text( 12px, 500, 14px, $second-txt-cl, center);
+    }
+    @include desk{
+    @include custom-flex-container(center, baseline, row, nowrap);    
+    @include custom-text( 14px, 500, 16px, $second-txt-cl, center);
+}
+
+}
+
+
+.contacts__item {
+    &:first-child {
+        margin-bottom: 10px;
+    }
+    @include custom-flex-container(space-between, baseline, row, nowrap);
+    &:first-child {
+        margin-right: 30px;
+    }
+
+}
+
+.contacts__link {
+    display: flex;
+    color: inherit;
+    fill:  $second-txt-cl;
+    @extend %active-link;
+}
+
+.contacts__icon{
+    height: 14px; 
+    width: 14px;
+@include tab{
+    margin-right: 8px;
+}
+@include desk{
+    margin-right: 10px;
+    height: 16px; 
+    width: 16px; 
+}}

@@ -1,0 +1,40 @@
+
+
+.icon-paragraph {
+
+    @include tab{       
+        width: calc(100% / 2 - 30px);
+    }
+    @include desk{
+    width: calc(100% / 4 - 30px);
+}
+    &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+}
+
+.icon-paragraph_thumb {
+    @include custom-flex-container(center, center, column, nowrap);
+    height: 120px;
+        margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: $filter-cl;
+  }
+
+
+
+.icon-paragraph__title {
+    @include custom-text(14px, bold, 16px, $main-txt-cl, center);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+@include tab {
+    text-align: left;
+}
+
+}
+
+.icon-paragraph__text {
+    @include custom-text(14px, normal, 24px, $second-txt-cl, left);
+    letter-spacing: 0.03em;
+}

@@ -1,0 +1,18 @@
+.adress {
+    @include custom-text( 14px, normal, 24px, $main-cl, center);
+    font-style: normal;
+    @include desk{
+        text-align: left;
+    }
+}
+
+.adress__link {
+    color: $icon-cl;
+}
+
+.adress__item {
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

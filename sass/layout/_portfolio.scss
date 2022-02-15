@@ -1,0 +1,14 @@
+.portfolio__section{
+    margin: 60px 0;
+    padding: 0;
+}
+
+
+.filters {
+    margin-bottom: 50px;
+    @include custom-flex-container(flex-start, baseline, row, wrap);
+    @include tab{
+        @include custom-flex-container(center, baseline, row, wrap);
+
+    }
+}

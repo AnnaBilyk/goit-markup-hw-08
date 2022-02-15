@@ -1,0 +1,44 @@
+.hero {
+    padding: 200px 0;
+    width: 100%;
+//    max-width: 1600px;     
+    background-color: $dark-bg-cl;
+        @include bg-contain($dark-bg-cl, $hero-overlay, '../images/hero/hero-bg-mobile.jpg', center, cover);
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            @include bg-contain($dark-bg-cl, $hero-overlay, '../images/hero/hero-bg-mobile@2x.jpg', center, cover);
+        }
+    @include tab {
+        @include bg-contain($dark-bg-cl, $hero-overlay, '../images/hero/hero-bg-tablet.jpg', center, cover);    
+        @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @include bg-contain($dark-bg-cl, $hero-overlay, '../images/hero/hero-bg-tablet@2x.jpg', center, cover);
+    }
+    @include desk{
+    @include bg-contain($dark-bg-cl, $hero-overlay, '../images/hero/hero-bg-desktop.jpg', center, cover);
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @include bg-contain($dark-bg-cl, $hero-overlay, '../images/hero/hero-bg-desktop@2x.jpg', center, cover);
+        }
+    }
+
+
+}
+
+.hero__container {
+    text-transform: uppercase;
+}
+
+
+.hero__title {
+    @include custom-text(26px, 900, 42px, $main-cl, center);
+    @include desk{
+        @include custom-text(44px, 900, 60px, $main-cl, center);
+    }
+    }}

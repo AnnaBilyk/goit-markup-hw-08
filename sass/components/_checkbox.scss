@@ -1,0 +1,51 @@
+.form__label--checkbox {
+    @include custom-flex-container(stretch, center, row, nowrap);
+}
+
+.label__checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    align-items: center;
+}
+
+.checkbox__icon {
+    @extend %animation;
+    flex-shrink: 0;
+    content: "";
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url(../images/check-box-empty.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 8.35px;
+    .label__checkbox:checked + & {
+        background-image: url(../images/check-box-full.svg);
+        background-color: $accent-cl;
+    }
+    .label__checkbox:focus + &, &:hover{
+        background-image: url(../images/check-box-empty-active.svg);
+    }
+    .label__checkbox:focus, .label__checkbox:checked + &{
+        background-image: url(../images/check-box-full.svg);
+        background-color: $accent-cl;
+        }
+}
+
+
+.checkbox__text {
+    @include custom-text(12px, normal, 14px, $second-txt-cl, left);
+    letter-spacing: 0.03em;
+@include desk{
+    @include custom-text(14px, normal, 24px, $second-txt-cl, left);
+}
+
+}
+
+.checkbox__link {
+    text-decoration-line: underline;
+    color: $accent-cl;
+}

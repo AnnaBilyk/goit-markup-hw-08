@@ -1,0 +1,50 @@
+// UTILS
+@import"./utils/normalize";
+@import"./utils/variables";
+@import"./utils/visually-hidden";
+@import"./utils/placeholders";
+@import"./utils/mixins";
+
+// BASE
+@import"./base/common";
+@import"./base/boxes";
+
+// // COMPONENTS
+@import"./components/header";
+@import"./components/logo";
+@import"./components/nav";
+@import"./components/contacts";
+@import"./components/hero";
+@import"./components/btn";
+@import"./components/icon-paragraph";
+@import"./components/pic-w-overlay";
+@import"./components/info-card";
+@import"./components/footer";
+@import"./components/socials";
+@import"./components/link-icon";
+@import"./components/address";
+@import"./components/backdrop";
+@import"./components/modal-window";
+@import"./components/mob-menu";
+@import"./components/forms";
+@import"./components/checkbox";
+@import"./components/filters";
+@import"./components/gallery-w-overlay";
+
+// // LAYOUT
+@import"./layout/header"; //---!
+@import"./layout/hero";
+@import"./layout/features";
+@import"./layout/services";
+@import"./layout/team";
+@import"./layout/partners";
+@import"./layout/portfolio";
+@import"./layout/footer";
+@import"./layout/address";
+@import"./layout/subscription";
+@import"./layout/modal";
+
+
+
+
+

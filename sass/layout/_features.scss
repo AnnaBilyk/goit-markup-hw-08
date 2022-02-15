@@ -1,0 +1,22 @@
+
+.features{
+    padding: $vert-padd 0 0;
+}
+
+.features__list {    
+    @include custom-flex-container(center, flex-start, row, wrap);
+@include tab{    
+    margin: -15px;
+}
+@include desk{
+    @include custom-flex-container(center, flex-start, row, nowrap);
+
+}
+}
+
+.icon-paragraph {    
+    @include tab{
+    margin: 15px;
+    }
+
+}

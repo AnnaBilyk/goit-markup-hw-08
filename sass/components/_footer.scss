@@ -1,0 +1,22 @@
+.page-footer {
+    background-color: $dark-bg-cl;
+    padding: 60px 0;
+}
+
+.page-footer__info{
+    display: inline-block;
+    width: 232px;
+}    
+
+
+
+.page-footer__title {
+    @include custom-text(14px, bold, 16px, $main-cl, left);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.footer__link {
+    color: $main-cl;
+    background-color: $soc-icon-page-footer-bg;
+}

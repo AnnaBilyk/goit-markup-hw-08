@@ -1,0 +1,84 @@
+@mixin tel {
+    @media screen and (min-width: 480px){
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+@mixin desk {
+    @media screen and (min-width: 1200px){
+        @content;
+    }
+}
+
+
+
+@mixin custom-flex-container($justify, $align, $direction, $wrap) {
+    // You can write own flex styles
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin custom-text( $f-size, $f-weight, $line-h, $color, $align) {
+    // Custom text options.
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $line-h;
+    color: $color;
+    text-align: $align;
+}
+
+@mixin bg-contain($bg_color, $bg_overlay, $bg_url, $bg-position, $bg_size) {
+    // Background contain styles
+    background-color: $bg_color;
+    background-image: $bg_overlay, url($bg-url);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: $bg-position;
+    background-size: $bg_size;
+}
+
+@mixin with-border($border-size, $border-color) {
+    // Custom border
+    border: $border-size solid $border-color;
+}
+
+@mixin custom-btn_fixed-size($btn-w, $btn-h, $btn-bg, $btn-text-color, $btn-radius, $shadow) {
+    // Custom button with fixed size (example: 200px/50px)
+    width: $btn-w;
+    height: $btn-h;
+    background: $btn-bg;
+    border-radius: $btn-radius;
+    box-sizing: border-box;
+    box-shadow: $shadow;
+    color: $btn-text-color;
+    cursor: pointer;
+    transition: .3s linear all;
+}
+
+@mixin custom-btn_auto-size($padding-V, $padding-H, $btn-bg, $btn-text-color, $btn-text-size, $btn-radius, $shadow) {
+    // Custom button with auto size. The size is adjusted depending on the content.
+    padding: $padding-V $padding-H;
+    background: $btn-bg;
+    border-radius: $btn-radius;
+    box-sizing: border-box;
+    box-shadow: $shadow;
+    color: $btn-text-color;
+    cursor: pointer;
+}
+
+@mixin btn-rounded($btn-w, $btn-bg) {
+    // Rounded button with radial border.
+    width: $btn-w;
+    height: $btn-w;
+    background: $btn-bg;
+    border-radius: $radius-rounded;
+    box-sizing: border-box;
+    cursor: pointer;
+}

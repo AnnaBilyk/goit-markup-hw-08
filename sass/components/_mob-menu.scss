@@ -1,0 +1,142 @@
+.burger-menu{
+    @extend %animation;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        fill: $accent-cl;
+    }
+
+    @include tab {
+        display: none;
+    }
+}
+
+.burger-menu__icon{
+    height: 40px;
+    width: 40px;
+}
+
+.mob-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    transform: translateX(100%);
+    @extend %animation;
+    }
+
+    .is-open{
+        transform: translateX(0);
+        @extend %animation;
+        @include tab {
+            display: none;
+        }
+    }
+
+
+    .mob-menu__container {
+        @include custom-flex-container(left, left, column, nowrap);
+   position: relative;
+    height: 100%;
+    padding: 48px 40px;
+    background-color: $main-cl;
+
+    @include tel{
+        padding: 48px 15px;    }
+    }
+    
+
+    .mob-menu__close-button {
+        position: absolute;
+        @include custom-flex-container(center, center, row, nowrap);
+        top:10px;
+        right:15px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        &:focus,
+        &:hover  {
+            fill: $accent-cl;}
+    }
+.mob-menu__close-button .close-button_img{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+}
+
+
+    .mob-menu__nav {
+        @include custom-flex-container(flex-start, flex-start, column, nowrap);
+        flex-grow: 1;
+    }
+.mob-menu__nav .nav__item{
+    @include custom-text(40px, 500, 47px, $logo-header-cl, left);
+    margin: 0;
+    margin-bottom: 32px;
+
+    :last-child{
+        margin-bottom: 302px;
+  
+    }
+}
+
+    .mob-menu__contacts {
+        margin-bottom: 64px;
+
+        .contacts__link{
+            @include custom-text(24px, 500, 28px, $second-txt-cl, left);
+        }
+    
+        .contacts__link--accent{
+            @include custom-text(34px, normal, 40px, $accent-cl, left);
+            font-style: normal;
+            margin-bottom: 34px;
+        }
+    }
+
+    
+    
+    .social-links {
+        @include custom-flex-container(left, left, row, wrap);
+
+        @media screen and (max-width: 439px) {
+        :last-child {
+            margin-top: 10px;
+          }
+        
+         :nth-last-child(2) {
+            border-right: none;
+          }}
+          @media screen and (max-width: 361px) {
+             :nth-last-child(2) {
+                margin-top: 10px;
+              }}
+
+    }
+    
+    .social-links__link{
+        @include custom-text(18px, 500, 22px, $accent-cl, left);
+    }
+
+    .social-links__item:not(:last-child) {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    

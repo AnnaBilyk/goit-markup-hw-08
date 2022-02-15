@@ -1,0 +1,41 @@
+
+.info-card {
+    background-color: $main-cl;
+    box-shadow: $card-shadow;
+    border-radius: 0px 0px $radius-soft-corner $radius-soft-corner;
+    text-align: center;
+    @include tab {
+          width: calc(100% / 2 - 30px);
+        }
+    @include desk{
+        width: calc(100% / 4 - 30px);
+    }
+}
+
+.info-card__image {
+    max-width: 270px;
+    min-width: 100%;
+}
+
+.info-card__text {
+    padding: 30px 24px;
+    text-align: center;
+    @include custom-text( 16px, normal, 19px, $main-txt-cl, center);
+    @include desk{
+        padding-bottom: 30px;
+    }
+
+}
+
+.info-card__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    @include desk{
+        margin-bottom: 50px;
+    }
+}
+
+.info-card__sup-title {
+    margin-bottom: 16px;
+    color: $second-txt-cl;
+}

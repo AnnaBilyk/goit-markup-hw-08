@@ -1,0 +1,17 @@
+.logo {
+    font-family: $logo-txt-style;
+
+    @include custom-text(24px, bold, 28px, $logo-header-cl, left);
+    letter-spacing: 0.03em;
+
+    @include desk{
+    @include custom-text(26px, bold, 31px, $logo-header-cl, left);
+}}
+
+.page-footer__logo {
+    color: $main-cl;
+}
+
+.logo__accent {
+    color: $accent-cl;
+}

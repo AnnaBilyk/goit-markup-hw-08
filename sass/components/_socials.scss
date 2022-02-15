@@ -1,0 +1,25 @@
+.socials {
+    @include custom-flex-container(center, center, row, nowrap);
+
+}
+
+.socials__item:not(:last-child) {
+    margin-right: 10px;}
+
+.socials__link {
+    @include custom-flex-container(center, center, row, nowrap);
+    border-radius: $radius-rounded;
+    color: $icon-cl;
+    &:hover,
+    &:focus {
+        background-color: $accent-cl;
+        color: $main-cl;
+    }
+}
+
+.socials__icon {
+    padding: 12px;
+    fill: currentColor;
+    border-radius: $radius-rounded;
+    overflow: visible;
+}

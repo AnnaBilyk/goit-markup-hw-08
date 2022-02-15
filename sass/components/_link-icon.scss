@@ -1,0 +1,30 @@
+.link-icon{
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
+  @include tab{
+    width: calc(100% / 3 - 30px);
+  }
+  @include desk{
+        width: calc(100% / 6 - 30px);
+  }
+}
+.link-icon__link {
+    @include custom-flex-container(center, flex-start, row, nowrap); 
+    height: 92px;
+
+    color: $icon-cl;
+    @include with-border(1px, $icon-cl);
+    border-radius: $radius-soft-corner;
+    &:hover,
+    &:focus {
+        @include with-border(1px, $accent-cl);
+        color: $accent-cl;
+    }
+}
+
+.link-icon__icon {
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    fill: currentColor;
+}

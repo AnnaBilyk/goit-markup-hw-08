@@ -1,0 +1,33 @@
+.filters {
+    @include custom-flex-container(center, center, row, nowrap);
+
+}
+
+.filters__item {
+    margin-right: 6px;
+    margin-bottom:15px;
+    &:nth-last-child(2),
+    &:last-child{
+        margin-bottom:0;
+
+    }
+}
+
+
+
+.button--filter{
+    @extend %animation;
+    @include custom-btn_auto-size(6px, 22px, $filter-cl, $main-txt-cl, 16px, $radius-soft-corner, none);
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    &:active,
+    &:hover,
+    &:focus {
+        background-color: $accent-cl;
+        color: $main-cl;
+        box-shadow: $filters-shadow;
+    }
+}

@@ -1,0 +1,19 @@
+.pic-w-overlay {
+    max-width: 370px;
+    margin-right: 30px;
+    position: relative;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.pic-w-overlay__description {
+    position: absolute;
+    top: 224px;
+    width: 100%;
+    padding: 27px 80px;
+    background: $card-overlay-cl;
+    @include custom-text( 14px, bold, 16px, $main-cl, center);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}

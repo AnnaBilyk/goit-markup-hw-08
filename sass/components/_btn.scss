@@ -1,0 +1,18 @@
+.button {
+    @include custom-btn_fixed-size(200px, 50px, $accent-cl, $main-cl, $radius-soft-corner, none);
+    @include custom-text(16px, bold, 30px, $main-cl, center);
+    @include custom-flex-container(center, center, row, nowrap);
+    letter-spacing: 0.06em;
+    padding: 10px auto;
+    overflow: visible;
+    @extend %animation;
+    &:hover,
+    &:focus {
+        background-color: $button-cl;
+        box-shadow: $button-shadow;
+    }
+}
+
+.button__icon {
+    margin-left: 10px;
+}

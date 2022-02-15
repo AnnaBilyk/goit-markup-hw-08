@@ -1,0 +1,27 @@
+.section {
+    padding: $vert-padd 0;
+    &__title{
+      @include custom-text(36px, 900, 60px, $main-txt-cl, center);
+      margin-bottom: 30px;
+      @include desk{
+        @include custom-text(36px, 900, 60px, $main-txt-cl, center);
+        margin-bottom: 50px;}
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 0 $hor-padd;
+    margin: 0;
+  
+    @include tel {
+      width: 480px;
+    }
+    @include tab {
+      margin: 0 auto;
+      width: 768px;
+    }
+    @include desk {
+      width: 1200px;
+    }
+  }

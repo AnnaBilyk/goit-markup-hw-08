@@ -1,0 +1,6 @@
+
+.partners__list {
+    @include custom-flex-container(center, center, row, wrap);
+    margin: -15px;
+}
+

@@ -1,0 +1,50 @@
+
+.subscribe__form {
+    display: block;
+@include tab{
+    @include custom-flex-container(center, center, column, wrap);
+    margin-left: auto;
+    margin-right: auto;
+}
+@include desk{
+    @include custom-flex-container(center, baseline, row, nowrap);
+
+}
+}
+
+.subscribe__input {
+    @include with-border(1px, $second-txt-cl);
+    filter: $button-shadow;
+    background-color: inherit;
+    height: 50px;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: $second-txt-cl;
+    padding: 15px 16px;
+    margin-bottom: 20px;
+    width: 100%;
+
+@include tab{
+    width: 450px;
+
+}
+@include desk{
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+
+}    
+}
+
+
+.page-footer__label{
+    width: auto;
+}
+.page-footer__button{
+    align-self: center;
+    margin: 0 auto;
+    @include tab {
+        margin: 0 0;
+
+    }
+}

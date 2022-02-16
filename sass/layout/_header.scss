@@ -25,7 +25,7 @@ max-width: 1200px;
         @include custom-flex-container(space-between, center, row, nowrap);
     }
     @include desk {
-        @include custom-flex-container(baseline, center, row, nowrap);
+        @include custom-flex-container(flex-start, baseline, row, nowrap);
 }}
 
 .mob-menu{

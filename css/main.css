@@ -1396,8 +1396,8 @@ img {
 @media screen and (min-width: 1200px) {
   .header__desktop {
     display: flex;
-    justify-content: baseline;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: baseline;
     flex-direction: row;
     flex-wrap: nowrap;
   }

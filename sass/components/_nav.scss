@@ -31,4 +31,9 @@
             top: 45px;
             cursor: default;
         }   }
+
+        @include desk{
+            &::after {
+                top: 41px;
+            }   }
     }

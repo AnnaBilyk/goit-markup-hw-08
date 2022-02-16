@@ -46,11 +46,12 @@
         @include custom-flex-container(left, left, column, nowrap);
    position: relative;
     height: 100%;
-    padding: 48px 40px;
+width: 100%;
+
     background-color: $main-cl;
 
-    @include tel{
-        padding: 48px 15px;    }
+        padding: 48px 40px;
+
     }
     
 
@@ -114,7 +115,11 @@
     .social-links {
         @include custom-flex-container(left, left, row, wrap);
 
-        @media screen and (max-width: 439px) {
+        @media screen and (max-width: 360px) {      
+             :nth-last-child(2) {
+                margin-top: 10px;
+              }}
+        @media screen and (max-width: 430px) {
         :last-child {
             margin-top: 10px;
           }
@@ -122,10 +127,6 @@
          :nth-last-child(2) {
             border-right: none;
           }}
-          @media screen and (max-width: 361px) {
-             :nth-last-child(2) {
-                margin-top: 10px;
-              }}
 
     }
     

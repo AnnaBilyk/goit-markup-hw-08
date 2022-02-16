@@ -1,9 +1,11 @@
 
 .gallery{
-    @include custom-flex-container(space-between, stretch, row, wrap);
+    @include custom-flex-container(flex-start, stretch, row, wrap);
+    margin-left: -30px;
 }
 .gallery__item {
     margin-bottom: 30px;
+    margin-left: 30px;
     width: 100%;
     display: flex;
     flex-direction: column;

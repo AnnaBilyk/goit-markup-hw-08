@@ -3,11 +3,6 @@ body {
     position: relative;
 }
 
-main {
-    @include custom-flex-container(center, center, column, nowrap); 
-    position: inherit;
-
-}
 
 img {
     display: block;

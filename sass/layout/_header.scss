@@ -1,6 +1,9 @@
 
 .header__container {
     @include custom-flex-container(space-between, center, row, nowrap);
+width: 100%;
+max-width: 1200px;
+
 }
 
 .header__logo {

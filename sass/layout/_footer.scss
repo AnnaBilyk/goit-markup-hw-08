@@ -37,6 +37,10 @@
     @include tab{
         margin-top: 0;
     }
+
+    @include desk{
+        margin-right: 93px;
+    }
 }
 
 .subscribe{
@@ -51,3 +55,6 @@
 }
 
 
+.page-footer .socials__icon{
+    color: $main-cl;
+}
